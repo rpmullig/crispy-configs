@@ -90,6 +90,19 @@ if ! command_exists python3; then
     fi
 fi
 
+
+if ! command_exists rg; then
+    if command_exists brew; then
+        brew install ripgrep; then
+    elif command_exists apt; then
+        sudo apt-get install -y ripgrep
+    else
+        echo "ripgrep not able to be installed. Might cause errors with. Neovm" >&2
+    fi
+fi
+
+
+
 # Install Neovim if not already installed
 if ! command_exists nvim; then
         wget https://github.com/neovim/neovim/releases/download/v0.9.5/nvim.appimage -O ~/nvim.appimage
