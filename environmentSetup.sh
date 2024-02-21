@@ -195,5 +195,8 @@ else
 fi
 
 # Reload .bashrc to apply changes
-source ~/.bashrc
-
+if [-f "$HOME/.bashrc" ]; then
+    source ~/.bashrc
+elif [-f "$HOME/.zshrc"]; then
+    source ~/.zshrc
+fi
