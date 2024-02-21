@@ -92,7 +92,6 @@ fi
 
 # Install Neovim if not already installed
 if ! command_exists nvim; then
-        brew install neovim
         wget https://github.com/neovim/neovim/releases/download/v0.9.5/nvim.appimage -O ~/nvim.appimage
         chmod +x ~/nvim.appimage
         mkdir -p /usr/local/bin/nvim
