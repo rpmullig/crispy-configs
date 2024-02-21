@@ -92,9 +92,7 @@ fi
 
 # Install Neovim if not already installed
 if ! command_exists nvim; then
-    if command_exists brew; then
         brew install neovim
-    elif command_exists apt; then
         wget https://github.com/neovim/neovim/releases/download/v0.9.5/nvim.appimage -O ~/nvim.appimage
         chmod +x ~/nvim.appimage
         mkdir -p /usr/local/bin/nvim
@@ -102,7 +100,7 @@ if ! command_exists nvim; then
         alias nvim=/usr/local/bin/nvim/nvim.appimage
         alias vim=nvim
     else
-        echo "Neither brew nor apt found. Cannot install Neovim." >&2
+        echo "Cannot install Neovim." >&2
         exit 1
     fi
 fi
@@ -165,6 +163,23 @@ EOF
 else
     # Print a message indicating that .zshrc doesn't exist
     echo "Error: .zshrc file not found in the home directory." >&2
+fi
+
+# Move contents of .config/nvim to $HOME/.config/nvim
+if [ -d "./.config/nvim" ]; then
+    mkdir -p "$HOME/.config"
+    mv -v "./.config/nvim/*" "$HOME/.config/nvim/"
+    echo "Contents of .config/nvim moved to $HOME/.config/nvim."
+else
+    echo "Error: .config/nvim directory not found." >&2
+fi
+
+# Move .tmux.conf to $HOME
+if [ -f "./.tmux.conf" ]; then
+    mv -v "./.tmux.conf" "$HOME/.tmux.conf"
+    echo ".tmux.conf moved to $HOME."
+else
+    echo "Error: .tmux.conf file not found." >&2
 fi
 
 # Reload .bashrc to apply changes
