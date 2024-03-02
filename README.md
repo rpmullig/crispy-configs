@@ -13,13 +13,17 @@ and adds it to the .bashrc or .zshrc.
 
 This was an attempt to work on both Linux using apt and MacOs using Homebrew.
 
+# Preprequistes 
+With the TMUX config, if you're experiencnig errors with fonts in the status bar, install nerd fonts https://github.com/ryanoasis/nerd-fonts
 
 # Purpose
 The ideal is to do a cold setup of this so that the environment is ready quickly.
 
 
 ## Credit
-As listed, a lot of the plugins were obtianed from "ThePrimeagen" from his
+As listed, a lot of the neovim plugins were obtianed from "ThePrimeagen" from his
 repo here: https://github.com/ThePrimeagen/init.lua
+
+
 
 
