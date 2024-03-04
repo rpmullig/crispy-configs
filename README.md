@@ -24,6 +24,6 @@ The ideal is to do a cold setup of this so that the environment is ready quickly
 As listed, a lot of the neovim plugins were obtianed from "ThePrimeagen" from his
 repo here: https://github.com/ThePrimeagen/init.lua
 
-
+Tmux config borrowed from Deams of code: https://github.com/dreamsofcode-io/tmux
 
 
