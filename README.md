@@ -1,10 +1,11 @@
 # crispy-configs
-Configs for setting up my terminal and neovim editor.
+Configs for setting up my terminal and neovim editor. Also installs a few software langagues. 
 
 # Run Instructions
 ```
 sudo ./environmentSetup.sh
 ```
+*Note*: If this fails, then go through the script for snippets to borrow for setup
 
 The above run instruction will install `java 17`, `go`, `python3`, `rust`
 as well installing neovim and moving `./confi/nvim/*` to the $HOME dir
