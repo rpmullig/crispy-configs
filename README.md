@@ -13,8 +13,10 @@ and adds it to the .bashrc or .zshrc.
 
 This was an attempt to work on both Linux using apt and MacOs using Homebrew.
 
-# Preprequistes 
+# Prerequisite 
 With the TMUX config, if you're experiencnig errors with fonts in the status bar, install nerd fonts https://github.com/ryanoasis/nerd-fonts
+
+install ripgrep https://github.com/BurntSushi/ripgrep
 
 # Purpose
 The ideal is to do a cold setup of this so that the environment is ready quickly.
